@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tools Repository
 
-## Getting Started
+This repository contains various tools developed to enhance productivity, automation, and integration across different projects. Each tool serves a specific purpose, ranging from API integrations to workflow automation.
 
-First, run the development server:
+## My tools
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- ~~[Mem Cleaner](#mem-cleaner)~~
+- [Template Maker](#template-maker)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The tools in this repository are designed to support multiple applications, including RepoBuzz, Selentrix, and other projects. They help streamline workflows by automating tasks, integrating APIs, and enhancing development efficiency.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tools
 
-## Learn More
+### Mem Cleaner
 
-To learn more about Next.js, take a look at the following resources:
+Mem Cleaner is a simple and efficient command-line tool written in Rust for detecting and managing duplicate files in a directory. It scans the specified directory (including subdirectories) and identifies duplicate files based on their names and sizes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Template Maker
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Flutter Template Generator CLI where users can add features from CLI and create a boiler plate code
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository.
+2. Create a feature branch.
+3. Submit a pull request with a detailed description.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
