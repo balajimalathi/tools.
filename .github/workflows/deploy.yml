@@ -1,0 +1,43 @@
+name: Deploy Nextjs to Hetzner
+
+on:
+  push:
+    branches:
+      - main  # Change if deploying from a different branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build NextJs Project
+        run: npm run build
+
+      - name: Deploy to Hetzner
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HETZNER_HOST }}
+          username: ${{ secrets.HETZNER_USER }}
+          key: ${{ secrets.HETZNER_SSH_KEY }}
+          script: |
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+            [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+            pm2 stop tools
+            cd /home/tools.
+            git pull origin main
+            npm install
+            npm run build
+            /root/.nvm/versions/node/v20.12.2/bin/pm2 reload tools || /root/.nvm/versions/node/v20.12.2/bin/pm2 --name "tools" serve ./dist/ 9001
+            /root/.nvm/versions/node/v20.12.2/bin/pm2 save
