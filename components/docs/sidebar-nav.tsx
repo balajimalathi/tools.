@@ -59,7 +59,7 @@ export function DocsSidebarNavItems({
             className={cn(
               "flex w-full items-center rounded-md px-2 py-1.5 text-muted-foreground hover:underline",
               {
-                "font-medium text-green-600 dark:text-green-400":
+                "font-medium text-amber-600 dark:text-amber-400":
                   pathname === item.href,
               },
             )}

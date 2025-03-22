@@ -1,79 +1,100 @@
 ---
-title: Setup
-description: How to setup RepoVox.
+title: Mem Cleaner
+description: Simple and efficient command-line tool written in Rust for detecting and managing duplicate files in a directory
 ---
-### Getting Started with RepoVox
-Follow these simple steps to set up **RepoVox** and automate your content sharing:
 
-<Steps>
+Mem Cleaner is a simple and efficient command-line tool written in Rust for detecting and managing duplicate files in a directory. It scans the specified directory (including subdirectories) and identifies duplicate files based on their names and sizes.
 
-### Login & Connect GitHub
-Sign in to **RepoVox** and link your GitHub account to start integrating your repositories.
- 
+<div className="flex mt-4">
+<div>![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)</div>
+</div >
+
+
+## Features
+- Scans the current or specified directory and subdirectories.
+- Identifies duplicate files based on file name and size.
+- Provides options to delete duplicates or move them to a separate folder.
+
+---
+
+# Installation
+
+## Prerequisites
+- Install Rust and Cargo: [Rust Installation Guide](https://www.rust-lang.org/tools/install)
+
+
+```sh
+git clone https://github.com/balajimalathi/mem_cleaner.git
+cd mem_cleaner
+cargo build --release
+```
+
+The compiled binary will be available in `target/release/`.
+
+## Usage
+
+Run the tool from the command line:
+
+```sh
+./mem_cleaner
+```
+
+Alternatively, specify a directory:
+
+```sh
+./mem_cleaner /path/to/directory
+```
+
+## How It Works
+1. The program prompts the user to scan the current directory or enter a custom path.
+2. It searches for files with the same name and size.
+3. The user is given the option to delete duplicate files or move them to a `duplicates/` folder.
+
+## Example Output
+
+```json
+G:\>mem_cleaner
+Use current directory: "G:\\"? no
+Enter directory path: G:\shadow
+Scanning directory: "G:\\shadow"
+Found 4 duplicate files.
+Choose an action: Delete All
+Are you sure you want to delete all duplicate files? yes
+Deleted: "G:\\shadow\\Scanned_documents\\jnu.jpg"
+Deleted: "G:\\shadow\\Scanned_documents\\ma.jpg"
+Deleted: "G:\\shadow\\Untitled-1-min.jpg"
+Deleted: "G:\\shadow\\Scanned_documents\\Scan print.jpg"
+
+G:\>
+```
+
+## Screenshots & Video Demo
+
+### Screenshots
 <img
-  className="mt-4 overflow-hidden rounded-lg border block dark:hidden"
-  src="/_static/docs/lite-repo-connect.png"
+  className="mt-4 overflow-hidden rounded-lg border block"
+  src="/_static/tools/mem-cleaner-ss.png"
   alt="Light Mode"
 />
 
-<img
-  className="mt-4 overflow-hidden rounded-lg border hidden dark:block"
-  src="/_static/docs/repo-connect.png"
-  alt="Dark Mode"
-/>
-
-### Install RepoVox GitHub App
-To enable webhook connectivity, install the **RepoVox GitHub App** on your GitHub account or specific repositories.
- 
-![RepoVox App Installation](/_static/docs/repovox-app-installation.gif)
-
-### Integrate Social Media
-Connect your preferred social media platforms like **Twitter, LinkedIn, and Dev.to** to automate content posting.
-
-<img
-  className="mt-4 overflow-hidden rounded-lg border block dark:hidden"
-  src="/_static/docs/lite-integration-page.png"
+### Video Demo
+<video controls
+  className="mt-4 overflow-hidden rounded-lg border block"
+  src="/_static/tools/mem_cleaner.mp4"
   alt="Light Mode"
-/>
+/>  
 
-<img
-  className="mt-4 overflow-hidden rounded-lg border hidden dark:block"
-  src="/_static/docs/integration-page.png"
-  alt="Dark Mode"
-/>
+## Uninstallation
 
-### Configure Your Repo & Actions
-- Select a **GitHub repository** and **branch**.
-- Choose the **trigger action** (e.g., Pull Request Merged, New Commit, etc.).
-- Define where the content should be posted.
+Simply remove the binary:
 
-<img
-  className="mt-4 overflow-hidden rounded-lg border block dark:hidden"
-  src="/_static/docs/lite-repo-page.png"
-  alt="Light Mode"
-/>
+```sh
+rm ./mem_cleaner
+```
 
-<img
-  className="mt-4 overflow-hidden rounded-lg border hidden dark:block"
-  src="/_static/docs/repo-page.png"
-  alt="Dark Mode"
-/>
+Or remove the entire cloned repository:
 
+```sh
+rm -rf mem_cleaner
+```
 
-<img
-  className="mt-4 overflow-hidden rounded-lg border block dark:hidden"
-  src="/_static/docs/lite-git-integration-page.png"
-  alt="Light Mode"
-/>
-
-<img
-  className="mt-4 overflow-hidden rounded-lg border hidden dark:block"
-  src="/_static/docs/git-integration-page.png"
-  alt="Dark Mode"
-/>
-
-
-### Start Automating!
-That's it! **RepoVox** will now generate AI-powered content based on your GitHub activity and post it automatically.
-
-</Steps>

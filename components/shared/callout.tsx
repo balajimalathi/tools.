@@ -50,7 +50,7 @@ const dataCallout = {
   success: {
     icon: CircleCheckBig,
     classes:
-      "border-green-200 bg-green-50 text-green-800 dark:bg-green-400/20 dark:text-green-300",
+      "border-green-200 bg-green-50 text-amber-800 dark:bg-green-400/20 dark:text-amber-300",
   },
   warning: {
     icon: AlertTriangle,

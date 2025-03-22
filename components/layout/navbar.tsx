@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { useScroll } from "@/hooks/use-scroll";
 import { Icons } from "@/components/shared/icons";
 import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
+import { ThemeToggle } from "../theme-toggle";
 
 interface NavBarProps {
   scroll?: boolean;
@@ -19,7 +20,7 @@ interface NavBarProps {
 }
 
 export function NavBar({ scroll = false }: NavBarProps) {
-  const scrolled = useScroll(50); 
+  const scrolled = useScroll(50);
 
   const selectedLayout = useSelectedLayoutSegment();
   const documentation = selectedLayout === "docs";
@@ -36,7 +37,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
       className={`sticky top-0 z-40 flex w-full justify-center bg-background/60 backdrop-blur-xl transition-all ${scroll ? (scrolled ? "border-b" : "bg-transparent") : "border-b"
         }`}
     >
-      <MaxWidthWrapper
+      {/* <MaxWidthWrapper
         className="flex h-14 items-center justify-between py-4"
         large={documentation}
       >
@@ -69,7 +70,19 @@ export function NavBar({ scroll = false }: NavBarProps) {
             </nav>
           ) : null}
         </div> 
-      </MaxWidthWrapper>
+      </MaxWidthWrapper> */}
+
+      <div className="container flex h-16 items-center justify-between">
+        <Link href={"/"}>
+          <div className="flex items-center gap-2">
+            <span className="text-2xl font-black">Tools.</span>
+          </div>
+        </Link>
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+        </div>
+      </div>
+
     </header>
   );
 }

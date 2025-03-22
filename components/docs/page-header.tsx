@@ -16,9 +16,9 @@ export function DocsPageHeader({
   return (
     <>
       <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
-        <div className="truncate">Docs</div>
+        <div className="truncate">Tools</div>
         <Icons.chevronRight className="size-4" />
-        <div className="font-medium text-green-600/95 dark:text-green-400">
+        <div className="font-medium text-amber-600/95 dark:text-amber-400">
           {heading}
         </div>
       </div>

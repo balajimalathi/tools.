@@ -2,17 +2,18 @@ import Link from "next/link"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ThemeToggle } from "@/components/theme-toggle" 
+import { ThemeToggle } from "@/components/theme-toggle"
 import { tools } from "@/lib/tools-data"
 
 export default function ToolsGrid() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 px-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-xl font-bold">Tools by Skndan</span>
-          </div>
+          <Link href={"/"}>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl font-black">Tools.</span>
+            </div></Link>
           <div className="flex items-center gap-4">
             <ThemeToggle />
           </div>
@@ -20,7 +21,7 @@ export default function ToolsGrid() {
       </header>
 
       <main className="flex-1">
-        <section className="container py-10 md:py-16 px-4">
+        <section className="container px-8 py-10 md:py-16">
           <div className="flex flex-col items-start gap-4 md:gap-8">
             <div>
               <h1 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
@@ -47,14 +48,21 @@ export default function ToolsGrid() {
                       )}
                     </div>
                     <CardHeader className="p-4">
-                      <CardTitle className="line-clamp-1">{tool.name}</CardTitle>
+                      <CardTitle className="line-clamp-1 text-2xl">{tool.name} {tool.version}</CardTitle>
+                      <div className="flex flex-wrap gap-2 pt-2">
+                        {tool.technology.map((tag) => (
+                          <Badge key={tag} className="px-2 py-0 text-xs">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
                     </CardHeader>
                     <CardContent className="p-4 pt-0">
                       <p className="line-clamp-2 text-sm text-muted-foreground">
                         {tool.description}
                       </p>
                     </CardContent>
-                    <CardFooter className="p-4 pt-0">
+                    <CardFooter className="px-4 pt-0">
                       <div className="flex flex-wrap gap-2">
                         {tool.tags.map((tag) => (
                           <Badge key={tag} variant="secondary" className="px-2 py-0 text-xs">
@@ -71,7 +79,7 @@ export default function ToolsGrid() {
         </section>
       </main>
 
-      <footer className="w-full border-t py-6 px-4">
+      <footer className="w-full border-t px-4 py-6">
         <div className="container flex items-center justify-between">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Skndan. All rights reserved.
