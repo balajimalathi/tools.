@@ -3,9 +3,9 @@ import { SidebarNavItem, SiteConfig } from "@/types";
  
 
 export const siteConfig: SiteConfig = {
-  name: "RepoVox",
+  name: "Tools.",
   description:
-    "Create a buzz around your products your are building with RepoVox. Stay connected with your audiences by send project updates in no time",
+    "Utility Tools for Developers",
   url: process.env.NEXT_PUBLIC_APP_URL ?? '',
   ogImage: `/_static/og.jpg`,
   links: {

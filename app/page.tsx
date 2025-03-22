@@ -25,10 +25,10 @@ export default function ToolsGrid() {
           <div className="flex flex-col items-start gap-4 md:gap-8">
             <div>
               <h1 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
-                Our Professional Tools
+                My Professional Tools
               </h1>
               <p className="mt-4 max-w-[700px] text-muted-foreground">
-                Explore our collection of powerful tools designed to enhance your workflow and boost productivity.
+                Explore my collection of powerful tools designed to enhance your workflow and boost productivity.
               </p>
             </div>
 
