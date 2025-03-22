@@ -34,7 +34,7 @@ export default function ToolsGrid() {
 
             <div className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {tools.map((tool) => (
-                <Link key={tool.slug} href={`/tools/${tool.slug}`} className="group">
+                <Link key={tool.slug} href={tool.live ? `/tools/${tool.slug}` : `#`} className="group">
                   <Card className="overflow-hidden transition-all duration-200 hover:shadow-md dark:hover:shadow-primary/10">
                     <div className="relative aspect-video overflow-hidden">
                       <Image
@@ -45,6 +45,9 @@ export default function ToolsGrid() {
                       />
                       {tool.isNew && (
                         <Badge className="absolute right-2 top-2">New</Badge>
+                      )}
+                      {!tool.live && (
+                        <Badge variant="secondary" className="absolute right-2 top-2">In progress</Badge>
                       )}
                     </div>
                     <CardHeader className="p-4">

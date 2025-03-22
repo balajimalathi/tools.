@@ -12,6 +12,23 @@ export const tools = [
     updatedAt: "March 22, 2025",
     repoUrl: "#",
     demoUrl: "#",
-    supportUrl: "#"
+    supportUrl: "#",
+    live: true
   }, 
+  {
+    name: "Flutter Template Generator",
+    slug: "flutter-template-generator",
+    description: "Flutter Template Generator CLI where users can add features from CLI and create a boiler plate code",
+    image: "",
+    tags: ["Flutter", "CLI"],
+    technology: ["Flutter", "Dart"],
+    isNew: false,
+    version: "0.1.1",
+    releasedAt: "March 22, 2025",
+    updatedAt: "March 22, 2025",
+    repoUrl: "#",
+    demoUrl: "#",
+    supportUrl: "#",
+    live: false
+  },
 ]
