@@ -75,10 +75,13 @@ export function NavBar({ scroll = false }: NavBarProps) {
       <div className="container flex h-16 items-center justify-between">
         <Link href={"/"}>
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-black">Tools.</span>
+            <span className="text-2xl font-semibold  tracking-tight">Tools.</span>
           </div>
         </Link>
         <div className="flex items-center gap-4">
+          <Link href="https://github.com/balajimalathi/tools." target="_blank" rel="noreferrer">
+            <Icons.gitHub className="size-6" />
+          </Link>
           <ThemeToggle />
         </div>
       </div>
