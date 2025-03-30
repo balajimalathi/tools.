@@ -14,6 +14,10 @@ export const docsConfig: DocsConfig = {
         {
           title: "Mem Cleaner",
           href: "/tools/mem-cleaner",
+        },
+        {
+          title: "cmdy",
+          href: "/tools/cmdy",
         }
       ],
     },

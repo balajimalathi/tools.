@@ -1,0 +1,116 @@
+---
+title: cmdy
+description: A lightweight Rust-based CLI tool for managing and executing predefined command sets in specified directories.
+---
+
+`cmdy` is a lightweight and efficient command-line tool written in Rust for managing and executing predefined command sets in specified directories. It allows users to store, list, execute, and log command sets effortlessly.
+
+<div className="flex mt-4">
+<div>![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)</div>
+</div>
+
+## Features
+- Select a directory to execute commands.
+- Store reusable command sets.
+- Execute multiple commands sequentially.
+- Progress bar and status tracking for execution.
+- Log executed commands with timestamps.
+- View and manage stored command sets.
+- Delete command sets when no longer needed.
+---
+
+## Prerequisites
+- Install Rust and Cargo: [Rust Installation Guide](https://www.rust-lang.org/tools/install)
+
+## Installation
+
+```sh
+git clone https://github.com/balajimalathi/cmdy.git
+cd cmdy
+cargo build --release
+```
+
+The compiled binary will be available in `target/release/`.
+
+## Usage
+
+Run the tool from the command line:
+
+```sh
+./cmdy run
+```
+
+### List stored command sets:
+```sh
+./cmdy list
+```
+
+### View execution logs:
+```sh
+./cmdy logs
+```
+
+### Delete a stored command set:
+```sh
+./cmdy delete <command-set-name>
+```
+
+## How It Works
+1. Prompts the user to select a directory.
+2. Allows the selection of an existing command set or creation of a new one.
+3. Executes the selected commands sequentially, displaying progress.
+4. Logs execution details with timestamps.
+5. Provides options to list or delete stored command sets.
+
+## Example Output
+
+```sh
+$ cmdy run
+Select a directory:
+1. Current Directory
+2. /home/user/projects
+3. Enter New Directory
+
+Select a command set:
+1. Build & Deploy
+2. Run Dev Server
+3. Create new command set
+
+🚀 Executing command set: Run Dev Server
+🔹 Running: npm run dev
+Spinning Deployment Server... -
+Complete!
+npm run dev stopped after pulling the vault.
+✅ All commands executed successfully!
+```
+
+## Screenshots & Video Demo
+
+### Screenshots
+<img
+  className="mt-4 overflow-hidden rounded-lg border block"
+  src="/_static/tools/cmdy-ss.png"
+  alt="cmdy in action"
+/>
+
+### Video Demo
+<video controls
+  className="mt-4 overflow-hidden rounded-lg border block"
+  src="/_static/tools/cmdy.mp4"
+  alt="cmdy CLI demonstration"
+/>
+
+## Uninstallation
+
+Simply remove the binary:
+
+```sh
+rm ./cmdy
+```
+
+Or remove the entire cloned repository:
+
+```sh
+rm -rf cmdy
+```
+
