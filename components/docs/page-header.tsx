@@ -28,7 +28,7 @@ export function DocsPageHeader({
           {heading}
         </h1>
         {text && (
-          <p className="text-balance text-lg text-muted-foreground">{text}</p>
+          <p className="text-lg text-muted-foreground">{text}</p>
         )}
       </div>
     </>
