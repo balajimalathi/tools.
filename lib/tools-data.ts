@@ -14,7 +14,7 @@ export const tools = [
     demoUrl: "#",
     supportUrl: "#",
     live: true
-  }, 
+  },
   {
     name: "cmdy",
     slug: "cmdy",
@@ -27,6 +27,22 @@ export const tools = [
     releasedAt: "March 30, 2025",
     updatedAt: "March 30, 2025",
     repoUrl: "https://github.com/balajimalathi/cmdy",
+    demoUrl: "#",
+    supportUrl: "#",
+    live: true
+  },
+  {
+    name: "hej",
+    slug: "hej",
+    description: "hej is a lightweight Go-based CLI tool designed to provide fast command execution,easy integration, and cross-platform binaries without external dependencies.",
+    image: "/_static/tools/mem_cleaner.png",
+    tags: ["Go", "CLI", "Productivity"],
+    technology: ["Go"],
+    isNew: true,
+    version: "v1.0.5",
+    releasedAt: "August 16, 2025",
+    updatedAt: "August 16, 2025",
+    repoUrl: "https://github.com/balajimalathi/hej",
     demoUrl: "#",
     supportUrl: "#",
     live: true

@@ -16,7 +16,7 @@ export function DocsSidebarNav({ setOpen }: DocsSidebarNavProps) {
   const items = docsConfig.sidebarNav;
 
   return items.length > 0 ? (
-    <div className="w-full">
+    <div className="container space-x-1">
       {items.map((item) => (
         <div key={item.title} className={cn("pb-8")}>
           <h4 className="mb-1 rounded-md py-1 text-base font-medium md:px-2 md:text-sm">

@@ -18,6 +18,10 @@ export const docsConfig: DocsConfig = {
         {
           title: "cmdy",
           href: "/tools/cmdy",
+        },
+         {
+          title: "hej",
+          href: "/tools/hej",
         }
       ],
     },

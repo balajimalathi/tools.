@@ -214,7 +214,7 @@ export function Mdx({ code, images }: MdxProps) {
     )?.blurDataURL;
 
     return (
-      <div className="mt-5 w-full overflow-hidden rounded-lg border">
+      <div className="mt-4 w-full overflow-hidden rounded-lg border">
         <BlurImage
           {...props}
           blurDataURL={blurDataURL}
